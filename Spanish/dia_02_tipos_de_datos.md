@@ -1,62 +1,14 @@
-<div align="center">
-  <h1> 30 Días de JavaScript: Tipos de Datos</h1>
-  <a class="header-badge" target="_blank" href="https://www.linkedin.com/in/asabeneh/">
-  <img src="https://img.shields.io/badge/style--5eba00.svg?label=LinkedIn&logo=linkedin&style=social">
-  </a>
-  <a class="header-badge" target="_blank" href="https://twitter.com/Asabeneh">
-  <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/asabeneh?style=social">
-  </a>
-
-<sub>Author:
-<a href="https://www.linkedin.com/in/asabeneh/" target="_blank">Asabeneh Yetayeh</a><br>
-<small> January, 2020</small>
-</sub>
-
-</div>
-</div>
-
-[<< Día 1](./readme.md) | [Day 3 >>](./dia_03_Booleanos_Operadores_Date/dia_03_Boleanos_Operadores_Date.md)
-
-![Thirty Days Of JavaScript](../images/banners/day_1_2.png)
-
-- [📔 Día 2](#-Día-2)
-  - [Tipos de Datos](#tipos-de-datos)
-    - [Tipos de datos primitivos](#tipos-de-datos-primitivos)
-    - [Tipos de datos no primitivos](#tipos-de-datos-no-primitivos)
-  - [Números](#números)
-    - [Declaración de tipos de datos numéricos](#declaración-de-tipos-de-datos-numéricos)
-    - [Objeto matemático](#objeto-matemático)
-      - [Generador de números aleatorios](#generador-de-números-aleatorios)
-  - [Cadenas](#cadenas)
-    - [Concatenación de cadenas](#concatenación-de-cadenas)
-      - [Concatenar usando el operador de suma](#concatenar-usando-el-operador-de-suma)
-      - [Cadenas literales largas](#cadenas-literales-largas)
-      - [Secuencias de escape en cadenas](#secuencias-de-escape-en-cadenas)
-      - [Literales de plantilla](#literales-de-plantilla)
-    - [Métodos de cadena](#métodos-de-cadena)
-  - [Comprobación de tipos de datos y conversión](#comprobación-de-tipos-de-datos-y-conversión)
-    - [Comprobación de tipos de datos](#comprobación-de-tipos-de-datos)
-    - [Cambio del tipo de datos](#cambio-del-tipo-de-datos)
-      - [Cadena a Int](#cadena-a-int)
-      - [Cadena a Floatante](#cadena-a-floatante)
-      - [Flotante a Int](#flotante-a-int)
-  - [💻 Día 2: Ejercicios](#-día-2-ejercicios)
-    - [Ejercicio: Nivel 1](#ejercicio-nivel-1)
-    - [Ejercicio: Nivel 2](#ejercicio-nivel-2)
-    - [Ejercicios: Nivel 3](#ejercicios-nivel-3)
 
 # 📔 Día 2
 
+[<< Día 1](./readme.md) | [Day 3 >>](./dia_03_Booleanos_Operadores_Date/dia_03_Boleanos_Operadores_Date.md)
+
 ## Tipos de Datos
 
-En la sección anterior, mencionamos un poco sobre los tipos de datos. Los datos o valores tienen tipos de datos. Los tipos de datos describen las características de los datos. Los tipos de datos se pueden dividir en dos:
-
-1. Tipos de datos primitivos
-2. Tipos de datos que no son primitivos (referencias de objetos)
+1. Primitivos
+2. No primitivos (referencias de objetos)
 
 ### Tipos de datos primitivos
-
-Los tipos de datos primitivos en JavaScript incluyen:
 
 1.  Números: enteros, flotantes
 2.  Cadenas: cualquier dato entre comillas simples, comillas dobles o comillas invertidas
@@ -64,14 +16,13 @@ Los tipos de datos primitivos en JavaScript incluyen:
 4.  Nulo - valor vacío o sin valor
 5.  Indefinido - una variable declarada sin un valor
 
-Los tipos de datos que no son primitivos en JavaScript incluyen:
+no primitivos:
 
 1. Objetos
 2. Funciones
 3. Matrices
 
-Ahora, veamos qué significan exactamente los tipos de datos primitivos y no primitivos.
-Los tipos de datos _primitivos_ son tipos de datos inmutables (no modificables). Una vez que se crea un tipo de datos primitivo, no podemos modificarlo.
+Los tipos de datos _primitivos_ son tipos de datos inmutables (no modificables).
 
 **Ejemplo:**
 
@@ -79,13 +30,11 @@ Los tipos de datos _primitivos_ son tipos de datos inmutables (no modificables).
 let word = "JavaScript";
 ```
 
-Si intentamos modificar la cadena almacenada en la variable _word_, JavaScript debería generar un error. Cualquier tipo de datos bajo comillas simples, comillas dobles o comillas invertidas son un tipo de datos de cadena.
+Si intentamos modificar la cadena almacenada en la variable _word_, JavaScript debería generar un error.
 
 ```js
 word[0] = "Y";
 ```
-
-Esta expresión no cambia la cadena almacenada en la variable _word_. Entonces, podemos decir que las cadenas no son modificables o, en otras palabras, inmutables. Los tipos de datos primitivos se comparan por sus valores. Comparemos diferentes valores de datos. Vea el ejemplo a continuación:
 
 ```js
 let numOne = 3;
@@ -106,8 +55,7 @@ console.log(lightOn == lightOff); // Falso
 
 ### Tipos de datos no primitivos
 
-Los tipos de datos _no primitivos_ son modificables o mutables. Podemos modificar el valor de los tipos de datos no primitivos después de su creación.
-Veamos creando una matriz. Una matriz es una lista de valores de datos entre corchetes. Las matrices pueden contener tipos de datos iguales o diferentes. Los valores de matriz están referenciados por su índice. En el índice de matriz de JavaScript comienza en cero. Es decir, el primer elemento de una matriz se encuentra en el índice cero, el segundo elemento en el índice uno y el tercer elemento en el índice dos, etc.
+Los tipos de datos _no primitivos_ son modificables o mutables. tipos de datos iguales o diferentes.
 
 ```js
 let nums = [1, 2, 3];
@@ -116,11 +64,11 @@ nums[0] = 10;
 console.log(nums); // [10, 2, 3]
 ```
 
-Como puede ver, una matriz, que es un tipo de datos no primitivo, es mutable. Los tipos de datos no primitivos no se pueden comparar por valor. Incluso si dos tipos de datos no primitivos tienen las mismas propiedades y valores, no son estrictamente iguales.
+Los tipos de datos no primitivos no se pueden comparar por valor. Incluso si dos tipos de datos no primitivos tienen las mismas propiedades y valores, no son estrictamente iguales.
 
 ```js
 let nums = [1, 2, 3];
-let numberos = [1, 2, 3];
+let numbers = [1, 2, 3];
 
 console.log(nums == numbers); // Falso
 
@@ -144,7 +92,7 @@ Los valores no primitivos se conocen como tipos de referencia, porque se compara
 
 ```js
 let nums = [1, 2, 3];
-let numberos = nums;
+let numbers = nums;
 
 console.log(nums == numbers); // Verdadero
 
@@ -156,15 +104,10 @@ let usuarioUno = {
 
 let userTwo = userOne;
 
-console.log(usuarioUno == usuarioDos); // Verdadero
+console.log(userTwo == userOne); // Verdadero
 ```
 
-Si tiene dificultades comprendiendo la diferencia entre los tipos de datos primitivos y los tipos de datos no primitivos, no es el único. Cálmate y ve a la siguiente sección e intenta volver después de un tiempo. Ahora comencemos los tipos de datos por tipo de número.
-
 ## Números
-
-Los números son números enteros y valores decimales que pueden hacer todas las operaciones aritméticas.
-Veamos algunos ejemplos de Números.
 
 ### Declaración de tipos de datos numéricos
 
@@ -907,86 +850,5 @@ let numInt = parseInt(num);
 
 console.log(numInt); // 9
 ```
-
-🌕 Usted es maravilloso. Acabas de completar los desafíos del día 2 y estás dos pasos adelante en tu camino hacia la grandeza. Ahora haz algunos ejercicios para tu cerebro y tus músculos.
-
-## 💻 Día 2: Ejercicios
-
-### Ejercicio: Nivel 1
-
-1. Declare una variable llamada desafío y asígnele un valor inicial **'30 días de JavaScript'**.
-2. Imprima la cadena en la consola del navegador usando **console.log()**
-3. Imprima la **longitud** de la cadena en la consola del navegador usando _console.log()_
-4. Cambie todos los caracteres de cadena a letras mayúsculas usando el método **toUpperCase()**
-5. Cambie todos los caracteres de la cadena a letras minúsculas usando el método **toLowerCase()**
-6. Corta (segmenta) la primera palabra de la cadena usando el método **substr()** o **substring()**
-7. Corta la frase _Days Of JavaScript_ de _30 Days Of JavaScript_.
-8. Verifique si la cadena contiene una palabra **Script** usando el método **includes()**
-9. Divide la **cadena** en un **array** usando el método **split()**
-10. Divida la cadena 30 días de JavaScript en el espacio usando el método **split()**
-11. 'Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon' **divide** la cadena en la coma y cámbiala a una matriz.
-12. Cambie 30 días de JavaScript a 30 días de Python usando el método **replace()**.
-13. ¿Qué es el carácter en el índice 15 en la cadena '30 días de JavaScript'? Utilice el método **charAt()**.
-14. ¿Cuál es el código de carácter de J en la cadena '30 días de JavaScript' usando **charCodeAt()**
-15. Use **indexOf** para determinar la posición de la primera aparición de **a** en 30 días de JavaScript
-16. Utilice **lastIndexOf** para determinar la posición de la última aparición de **a** en 30 días de JavaScript.
-17. Usa **indexOf** para encontrar la posición de la primera aparición de la palabra **porque** en la siguiente oración:**'No puedes terminar una oración con porque porque porque es una conjunción'**
-18. Usa **lastIndexOf** para encontrar la posición de la última aparición de la palabra **porque** en la siguiente oración:**'No puedes terminar una oración con porque porque porque es una conjunción'**
-19. Usa **buscar** para encontrar la posición de la primera aparición de la palabra **porque** en la siguiente oración:**'No puedes terminar una oración con porque porque porque es una conjunción'**
-20. Use **trim()** para eliminar cualquier espacio en blanco final al principio y al final de una cadena. Por ejemplo, '30 días de JavaScript'.
-21. Use el método **startsWith()** con la cadena _30 días de JavaScript_ y haga que el resultado sea verdadero
-22. Use el método **endsWith()** con la cadena _30 días de JavaScript_ y haga que el resultado sea verdadero
-23. Usa el método **match()** para encontrar todos los **a** en 30 días de JavaScript
-24. Use **concat()** y fusione '30 días de' y 'JavaScript' en una sola cadena, '30 días de JavaScript'
-25. Use el método **repeat()** para imprimir 30 días de JavaScript 2 veces
-
-### Ejercicio: Nivel 2
-
-1. Usando console.log() imprima la siguiente declaración:
-
-   ```sh
-   The quote 'There is no exercise better for the heart than reaching down and lifting people up.' by John Holmes teaches us to help one another.
-   ```
-
-2. Usando console.log() imprima la siguiente cita de la Madre Teresa:
-
-   ```sh
-   "Love is not patronizing and charity isn't about pity, it is about love. Charity and love are the same -- with charity you give love, so don't just give money but reach out your hand instead."
-   ```
-
-3. Compruebe si typeof '10' es exactamente igual a 10. Si no, hágalo exactamente igual.
-4. Compruebe si parseFloat('9.8') es igual a 10, si no, hágalo exactamente igual a 10.
-5. Verifique si 'on' se encuentra tanto en Python como en la jerga
-6. _Espero que este curso no esté lleno de jerga_. Compruebe si _jargon_ está en la oración.
-7. Genere un número aleatorio entre 0 y 100 inclusive.
-8. Genere un número aleatorio entre 50 y 100 inclusive.
-9. Genere un número aleatorio entre 0 y 255 inclusive.
-10. Acceda a los caracteres de la cadena 'JavaScript' utilizando un número aleatorio.
-11. Use console.log() y caracteres de escape para imprimir el siguiente patrón.
-
-    ```js
-    1 1 1 1 1
-    2 1 2 4 8
-    3 1 3 9 27
-    4 1 4 16 64
-    5 1 5 25 125
-    ```
-
-12. Usa **substr** para separar la frase **porque porque porque** de la siguiente oración:**'No puedes terminar una oración con porque porque porque es una conjunción'**
-
-### Ejercicios: Nivel 3
-
-1. 'El amor es lo mejor que hay en este mundo. Algunos encontraron su amor y algunos todavía están buscando su amor. Cuente el número de palabras **amor** en esta oración.
-2. Usa **match()** para contar el número de todos los **porque** en la siguiente oración:**'No puedes terminar una oración con porque porque porque es una conjunción'**
-3. Limpia el siguiente texto y encuentra la palabra más frecuente (pista, usa replace y expresiones regulares).
-
-   ```js
-   const sentence =
-     "%I $am@% a %tea@cher%, &and& I lo%#ve %te@a@ching%;. The@re $is no@th@ing; &as& mo@re rewarding as educa@ting &and& @emp%o@weri@ng peo@ple. ;I found tea@ching m%o@re interesting tha@n any ot#her %jo@bs. %Do@es thi%s mo@tiv#ate yo@u to be a tea@cher!? %Th#is 30#Days&OfJavaScript &is al@so $the $resu@lt of &love& of tea&ching";
-   ```
-
-4. Calcula el ingreso anual total de la persona extrayendo los números del siguiente texto. 'Él gana 5000 euros de salario por mes, bono anual de 10000 euros, cursos en línea de 15000 euros por mes.'
-
-🎉 ¡FELICITACIONES! 🎉
 
 [<< Día 1](./readme.md) | [Day 3 >>](./dia_03_Booleanos_Operadores_Date/dia_03_Boleanos_Operadores_Date.md)

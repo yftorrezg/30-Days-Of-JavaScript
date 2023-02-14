@@ -1,90 +1,18 @@
-<div align="center">
-  <h1> 30 Días de JavaScript</h1>
-  <a class="header-badge" target="_blank" href="https://www.linkedin.com/in/asabeneh/">
-  <img src="https://img.shields.io/badge/style--5eba00.svg?label=LinkedIn&logo=linkedin&style=social">
-  </a>
-  <a class="header-badge" target="_blank" href="https://twitter.com/Asabeneh">
-  <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/asabeneh?style=social">
-  </a>
-
-<sub>Autor:
-<a href="https://www.linkedin.com/in/asabeneh/" target="_blank">Asabeneh Yetayeh</a><br>
-<small> Enero de 2020</small>
-</sub>
-
-  <div>
-
-🇬🇧 [English](../readMe.md)
-🇪🇸 [Spanish](./readme.md)
-🇷🇺 [Russian](../RU/README.md)
-
-  </div>
-</div>
-
-![Thirty Days Of JavaScript](./images/day_1_1.png)
-
-[📔Día 1](#día-1)
-
-- [📔Día 1](#día-1)
-  - [Introducción](#introducción)
-  - [Requerimientos](#requerimientos)
-  - [Preparación](#preparación)
-    - [Instala Node.js](#instala-nodejs)
-    - [Navegador](#navegador)
-      - [Instalando Google Chrome](#instalando-google-chrome)
-      - [Abriendo la consola de Google Chrome](#abriendo-la-consola-de-google-chrome)
-      - [Escribiendo el código en la consola del navegador](#escribiendo-el-código-en-la-consola-del-navegador)
-        - [Console.log](#consolelog)
-        - [Console.log con múltiples argumentos](#consolelog-con-múltiples-argumentos)
-        - [Comentario](#comentario)
-        - [Sintaxis](#sintaxis)
-      - [Aritmética](#aritmética)
-    - [Editor de código](#editor-de-código)
-      - [Instalando Visual Studio](#instalando-visual-studio)
-      - [Cómo usar Visual Studio Code](#cómo-usar-visual-studio-code)
-  - [Añadiendo JavaScript a una página web](#añadiendo-javascript-a-una-página-web)
-    - [Script en línea](#script-en-línea)
-    - [Script interno](#script-interno)
-    - [Script externo](#script-externo)
-    - [Múltiples Scripts externos](#múltiples-scripts-externos)
-  - [Introducción a los tipos de datos](#introducción-a-los-tipos-de-datos)
-    - [Números](#números)
-    - [Cadenas de texto](#cadenas-de-texto)
-    - [Booleanos](#booleanos)
-    - [Undefined](#undefined)
-    - [Null](#null)
-  - [Comprobando los tipos de datos](#comprobando-los-tipos-de-datos)
-  - [Comentarios](#comentarios)
-    - [Variables](#variables)
-- [💻 Día 1: Ejercicios](#-día-1-ejercicios)
 
 # 📔Día 1
 
+🇬🇧 [English](../readMe.md)
+🇪🇸 [Spanish](./readme.md)
+
 ## Introducción
 
-**Felicidades** por decidir participar en el desafío de 30 días de JavaScript. En este desafío aprenderás todo lo que necesitas para ser un programador de JavaScript y los conceptos generales de la programación. Al final obtendrás un certificado de 30 días de JavaScript. Únete al [grupo de telegram](https://t.me/ThirtyDaysOfJavaScript).
+[grupo de telegram](https://t.me/ThirtyDaysOfJavaScript).
 
-**30 días de JavaScript** es una guía tanto para principiantes como para desarrolladores avanzados. Bienvenido a JavaScript. Disfruto de usarlo y enseñarlo y espero que tú también. JavaScript es el lenguaje del navegador.
-
-En este tutorial de paso a paso, aprenderás JavaScript, el lenguaje de programación más popular de la historia de la humanidad. Se usa para **agregar interactividad a las páginas web, para desarrollar aplicaciones móviles, aplicaciones de desktop, juegos** y ahora también puede ser usado para el **aprendizaje automático** (machine learning) e **inteligencia artificial** (AI). Su popularidad ha incrementado en años recientes, siendo el lenguaje predominante por cuatro años consecutivos y el más usado en GitHub.
-
-## Requerimientos
-
-Ningún conocimiento previo es requerido para el siguiente desafío. Solo necesitarás:
-
-1. Motivación
-2. Una computadora
-3. Internet
-4. Un navegador
-5. Un editor de texto
-
-## Preparación
-
-Asumo que tienes motivación, un fuerte deseo de convertirte en un desarrollador, una computadora e internet. Si tienes todo esto, entonces lo tienes todo.
+Se usa para **agregar interactividad a las páginas web, para desarrollar aplicaciones móviles, aplicaciones de desktop, juegos** y ahora también puede ser usado para el **aprendizaje automático** (machine learning) e **inteligencia artificial** (AI). Su popularidad ha incrementado en años recientes, siendo el lenguaje predominante por cuatro años consecutivos y el más usado en GitHub.
 
 ### Instala Node.js
 
-Tal vez no lo necesites ahora pero si más adelante. Asi que instala [node.js](https://nodejs.org/en/)
+[node.js](https://nodejs.org/en/)
 
 ![Node download](./images/download_node.png)
 
@@ -92,40 +20,25 @@ Luego de que se descargue, haz doble click e instálalo
 
 ![Install node](./images/install_node.png)
 
-Puedes comprobar si se ha instalado correctamente abriendo la terminal del ordenador
+Puedes comprobar con la terminal
 
     asabeneh $ node -v
     v12.14.0
-
-Para el desafío estaremos utilizando la versión 12.14.0, la cual es la recomendada por Node.
 
 ### Navegador
 
 Existen muchos navegadores disponibles. Sin embargo, recomiendo especialmente Google Chrome.
 
-#### Instalando Google Chrome
-
-Instala [Google Chrome](https://www.google.com/chrome/) si aún no lo tienes. Podemos escribir un pequeño código JavaScript en la consola del navegador, pero no utilizamos la consola para desarrollar aplicaciones.
-
-![Google Chrome](./images/google_chrome.png)
-
 #### Abriendo la consola de Google Chrome
 
-Puedes abrir la consola de Google Chrome haciendo click en los tres puntos de la esquina superior derecha del navegador Chrome o utilizando un acceso directo. Yo prefiero usar los atajos.
-
 ![Opening chrome](./images/opening_developer_tool.png)
-
-Para abrir la consola Chrome usando un atajo.
-
-    Mac
-    Command+Option+I
+Cconsola Chrome usando un atajo.
 
     Windows:
     Ctl+Shift+I
 
 ![Opening console](./images/opening_chrome_console_shortcut.png)
 
-Después de abrir la consola de Google Chrome, intenta explorar los botones marcados. Pasaremos la mayor parte del tiempo aquí. La consola es el lugar donde va el código de JavaScript. El motor de la Consola de Google V8 cambia tu código JavaScript a código de máquina. Escribamos un código JavaScript en la consola de Google Chrome:
 
 ![write code on console](./images/js_code_on_chrome_console.png)
 

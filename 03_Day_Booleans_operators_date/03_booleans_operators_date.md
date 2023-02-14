@@ -1,63 +1,8 @@
-<div align="center">
-  <h1> 30 Days Of JavaScript: Booleans, Operators, Date</h1>
-  <a class="header-badge" target="_blank" href="https://www.linkedin.com/in/asabeneh/">
-  <img src="https://img.shields.io/badge/style--5eba00.svg?label=LinkedIn&logo=linkedin&style=social">
-  </a>
-  <a class="header-badge" target="_blank" href="https://twitter.com/Asabeneh">
-  <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/asabeneh?style=social">
-  </a>
-
-  <sub>Author:
-  <a href="https://www.linkedin.com/in/asabeneh/" target="_blank">Asabeneh Yetayeh</a><br>
-  <small> January, 2020</small>
-  </sub>
-</div>
+# 📔 Day 3
 
 [<< Day 2](../02_Day_Data_types/02_day_data_types.md) | [Day 4 >>](../04_Day_Conditionals/04_day_conditionals.md)
 
-![Thirty Days Of JavaScript](../images/banners/day_1_3.png)
-
-- [📔 Day 3](#-day-3)
-	- [Booleans](#booleans)
-		- [Truthy values](#truthy-values)
-		- [Falsy values](#falsy-values)
-	- [Undefined](#undefined)
-	- [Null](#null)
-	- [Operators](#operators)
-		- [Assignment operators](#assignment-operators)
-		- [Arithmetic Operators](#arithmetic-operators)
-		- [Comparison Operators](#comparison-operators)
-		- [Logical Operators](#logical-operators)
-		- [Increment Operator](#increment-operator)
-		- [Decrement Operator](#decrement-operator)
-		- [Ternary Operators](#ternary-operators)
-		- [Operator Precedence](#operator-precedence)
-	- [Window Methods](#window-methods)
-		- [Window alert() method](#window-alert-method)
-		- [Window prompt() method](#window-prompt-method)
-		- [Window confirm() method](#window-confirm-method)
-	- [Date Object](#date-object)
-		- [Creating a time object](#creating-a-time-object)
-		- [Getting full year](#getting-full-year)
-		- [Getting month](#getting-month)
-		- [Getting date](#getting-date)
-		- [Getting day](#getting-day)
-		- [Getting hours](#getting-hours)
-		- [Getting minutes](#getting-minutes)
-		- [Getting seconds](#getting-seconds)
-		- [Getting time](#getting-time)
-	- [💻 Day 3: Exercises](#-day-3-exercises)
-		- [Exercises: Level 1](#exercises-level-1)
-		- [Exercises: Level 2](#exercises-level-2)
-		- [Exercises: Level 3](#exercises-level-3)
-
-# 📔 Day 3
-
 ## Booleans
-
-A boolean data type represents one of the two values:_true_ or _false_. Boolean value is either true or false. The use of these data types will be clear when you start the comparison operator. Any comparisons return a boolean value which is either true or false.
-
-**Example: Boolean Values**
 
 ```js
 let isLightOn = true
@@ -68,7 +13,6 @@ let truValue = 4 > 3    // true
 let falseValue = 4 < 3  // false
 ```
 
-We agreed that boolean values are either true or false.
 
 ### Truthy values
 
@@ -180,7 +124,6 @@ console.log(
 In programming we compare values, we use comparison operators to compare two values. We check if a value is greater or less or equal to other value.
 
 ![Comparison Operators](../images/comparison_operators.png)
-**Example: Comparison Operators**
 
 ```js
 console.log(3 > 2)              // true, because 3 is greater than 2
@@ -483,9 +426,6 @@ const timeInSeconds = new Date().getTime()
 console.log(allSeconds == timeInSeconds) // true
 ```
 
-Let us format these values to a human readable time format.
-**Example:**
-
 ```js
 const now = new Date()
 const year = now.getFullYear() // return year
@@ -496,138 +436,5 @@ const minutes = now.getMinutes() // return number (0 -59)
 
 console.log(`${date}/${month}/${year} ${hours}:${minutes}`) // 4/1/2020 0:56
 ```
-
-🌕  You have boundless energy. You have just completed day 3 challenges and you are three steps a head in to your way to greatness. Now do some exercises for your brain and for your muscle.
-
-## 💻 Day 3: Exercises
-
-### Exercises: Level 1
-
-1. Declare firstName, lastName, country, city, age, isMarried, year variable and assign value to it and use the typeof operator to check different data types.
-2. Check if type of '10' is equal to 10
-3. Check if parseInt('9.8') is equal to 10
-4. Boolean value is either true or false.
-   1. Write three JavaScript statement which provide truthy value.
-   2. Write three JavaScript statement which provide falsy value.
-
-5. Figure out the result of the following comparison expression first without using console.log(). After you decide the result confirm it using console.log()
-   1. 4 > 3
-   2. 4 >= 3
-   3. 4 < 3
-   4. 4 <= 3
-   5. 4 == 4
-   6. 4 === 4
-   7. 4 != 4
-   8. 4 !== 4
-   9. 4 != '4'
-   10. 4 == '4'
-   11. 4 === '4'
-   12. Find the length of python and jargon and make a falsy comparison statement.
-
-6. Figure out the result of the following expressions first without using console.log(). After you decide the result confirm it by using console.log()
-   1. 4 > 3 && 10 < 12
-   2. 4 > 3 && 10 > 12
-   3. 4 > 3 || 10 < 12
-   4. 4 > 3 || 10 > 12
-   5. !(4 > 3)
-   6. !(4 < 3)
-   7. !(false)
-   8. !(4 > 3 && 10 < 12)
-   9. !(4 > 3 && 10 > 12)
-   10. !(4 === '4')
-   11. There is no 'on' in both dragon and python
-
-7. Use the Date object to do the following activities
-   1. What is the year today?
-   2. What is the month today as a number?
-   3. What is the date today?
-   4. What is the day today as a number?
-   5. What is the hours now?
-   6. What is the minutes now?
-   7. Find out the numbers of seconds elapsed from January 1, 1970 to now.
-
-### Exercises: Level 2
-
-1. Write a script that prompt the user to enter base and height of the triangle and calculate an area of a triangle (area = 0.5 x b x h).
-
-   ```sh
-   Enter base: 20
-   Enter height: 10
-   The area of the triangle is 100
-   ```
-
-1. Write a script that prompt the user to enter side a, side b, and side c of the triangle and and calculate the perimeter of triangle (perimeter = a + b + c)
-
-   ```sh
-   Enter side a: 5
-   Enter side b: 4
-   Enter side c: 3
-   The perimeter of the triangle is 12
-   ```
-
-1. Get length and width using prompt and calculate an area of rectangle (area = length x width and the perimeter of rectangle (perimeter = 2 x (length + width))
-1. Get radius using prompt and calculate the area of a circle (area = pi x r x r) and circumference of a circle(c = 2 x pi x r) where pi = 3.14.
-1. Calculate the slope, x-intercept and y-intercept of y = 2x -2
-1. Slope is m = (y<sub>2</sub>-y<sub>1</sub>)/(x<sub>2</sub>-x<sub>1</sub>). Find the slope between point (2, 2) and point(6,10)
-1. Compare the slope of above two questions.
-1. Calculate the value of y (y = x<sup>2</sup> + 6x + 9). Try to use different x values and figure out at what x value y is 0.
-1. Writ a script that prompt a user to enter hours and rate per hour. Calculate pay of the person?
-
-    ```sh
-    Enter hours: 40
-    Enter rate per hour: 28
-    Your weekly earning is 1120
-    ```
-
-1. If the length of your name is greater than 7 say, your name is long else say your name is short.
-1. Compare your first name length and your family name length and you should get this output.
-
-    ```js
-    let firstName = 'Asabeneh'
-    let lastName = 'Yetayeh'
-    ```
-
-    ```sh
-    Your first name, Asabeneh is longer than your family name, Yetayeh
-    ```
-
-1. Declare two variables _myAge_ and _yourAge_ and assign them initial values and myAge and yourAge.
-
-   ```js
-   let myAge = 250
-   let yourAge = 25
-   ```
-
-   ```sh
-   I am 225 years older than you.
-   ```
-
-1. Using prompt get the year the user was born and if the user is 18 or above allow the user to drive if not tell the user to wait a certain amount of years.
-
-    ```sh
-
-    Enter birth year: 1995
-    You are 25. You are old enough to drive
-
-    Enter birth year: 2005
-    You are 15. You will be allowed to drive after 3 years.
-    ```
-
-1. Write a script that prompt the user to enter number of years. Calculate the number of seconds a person can live. Assume some one lives just hundred years
-
-   ```sh
-   Enter number of years you live: 100
-   You lived 3153600000 seconds.
-   ```
-
-1. Create a human readable time format using the Date time object
-   1. YYYY-MM-DD HH:mm
-   2. DD-MM-YYYY HH:mm
-   3. DD/MM/YYYY HH:mm
-
-### Exercises: Level 3
-
-1. Create a human readable time format using the Date time object. The hour and the minute should be all the time two digits(7 hours should be 07 and 5 minutes should be 05 )
-   1. YYY-MM-DD HH:mm eg. 20120-01-02 07:05
 
 [<< Day 2](../02_Day_Data_types/02_day_data_types.md) | [Day 4 >>](../04_Day_Conditionals/04_day_conditionals.md)

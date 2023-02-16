@@ -1,55 +1,10 @@
-<div align="center">
-  <h1> 30 Days Of JavaScript: Console Object Methods</h1>
-  <a class="header-badge" target="_blank" href="https://www.linkedin.com/in/asabeneh/">
-  <img src="https://img.shields.io/badge/style--5eba00.svg?label=LinkedIn&logo=linkedin&style=social">
-  </a>
-  <a class="header-badge" target="_blank" href="https://twitter.com/Asabeneh">
-  <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/asabeneh?style=social">
-  </a>
-
-<sub>Author:
-<a href="https://www.linkedin.com/in/asabeneh/" target="_blank">Asabeneh Yetayeh</a><br>
-<small> January, 2020</small>
-</sub>
-
-</div>
+# Day 13
 
 [<< Day 12](../12_Day_Regular_expressions/12_day_regular_expressions.md) | [Day 14>>](../14_Day_Error_handling/14_day_error_handling.md)
 
-![Thirty Days Of JavaScript](../images/banners/day_1_13.png)
-
-- [Day 13](#day-13)
-	- [Console Object Methods](#console-object-methods)
-		- [console.log()](#consolelog)
-		- [console.warn()](#consolewarn)
-		- [console.error()](#consoleerror)
-		- [console.table()](#consoletable)
-		- [console.time()](#consoletime)
-		- [console.info()](#consoleinfo)
-		- [console.assert()](#consoleassert)
-		- [console.group()](#consolegroup)
-		- [console.count()](#consolecount)
-		- [console.clear()](#consoleclear)
-	- [Exercises](#exercises)
-		- [Exercises:Level 1](#exerciseslevel-1)
-		- [Exercises:Level 2](#exerciseslevel-2)
-		- [Exercises:Level 3](#exerciseslevel-3)
-
-# Day 13
-
 ## Console Object Methods
 
-In this section, we will cover about console and console object methods. Absolute beginners usually do not know which to use: console.log(), document.write() or document.getElementById.
-
-We use console object methods to show output on the browser console and we use document.write to show output on the browser document(view port). Both methods used only for testing and debugging purposes. The console method is the most popular testing and debugging tool on the browser. We use document.getElementById() when we like to interact with DOM try using JavaScript. We will cover DOM in another section.
-
-In addition to the famous, console.log() method, the console provides other more methods.
-
 ### console.log()
-
-We use console.log() to show output on the browser console. We can substitute values and also we can style the logging out put using %c.
-
-- Showing output on browser console
 
 ```js
 console.log('30 Days of JavaScript')
@@ -71,8 +26,6 @@ console.log('%d %s of JavaScript', 30, 'Days')
 
 - CSS
 
-We can style logging message using css. Copy the following code and paste it on browser console to see the result.
-
 ```js
 console.log('%c30 Days Of JavaScript', 'color:green') // log output is green
 console.log(
@@ -87,8 +40,6 @@ console.log(
 
 ### console.warn()
 
-We use console.warn() to give warning on browser. For instance to inform or warn deprecation of version of a package or bad practices. Copy the following code and paste it on browser console to see warning messages.
-
 ```js
 console.warn('This is a warning')
 console.warn(
@@ -99,8 +50,6 @@ console.warn('Warning is different from error')
 
 ### console.error()
 
-The console.error() method shows an error messages.
-
 ```js
 console.error('This is an error message')
 console.error('We all make mistakes')
@@ -108,16 +57,10 @@ console.error('We all make mistakes')
 
 ### console.table()
 
-The console.table() method display data as a table on the console. Displays tabular data as a table. The console.table() takes one required argument data, which must be an array or an object, and one additional optional parameter columns.
-
-Let us first start with a simple array. The code below displays a table with two columns. An index column to display the index and value column to display the names
-
 ```js
 const names = ['Asabeneh', 'Brook', 'David', 'John']
 console.table(names)
 ```
-
-Let us also check the result of an object. This creates table with two columns:an index column containing the keys and a value column contain the values of the object.
 
 ```js
 const user = {
@@ -129,8 +72,6 @@ const user = {
 }
 console.table(user)
 ```
-
-Check the rest of the examples by copying and paste on the browser console.
 
 ```js
 const countries = [
@@ -210,10 +151,12 @@ Finland Helsinki
 Sweden Stockholm
 Norway Oslo
 Regular for loop: 0.34716796875ms
+
 Finland Helsinki
 Sweden Stockholm
 Norway Oslo
 for of loop: 0.26806640625ms
+
 Finland Helsinki
 Sweden Stockholm
 Norway Oslo
@@ -312,8 +255,6 @@ console.groupEnd()
 
 ### console.count()
 
-It prints the number of times the console.count() is called. It takes a string label parameter. It is very helpful to count the number of times a function is called. In the following example, the console.count() method will run three times
-
 ```js
 const func = () => {
   console.count('Function has been called')
@@ -333,26 +274,32 @@ Function has been called: 3
 
 The console.clear() cleans the browser console.
 
-🌕 Keep up the good work. Keep pushing, the sky is the limit! You have just completed day 13 challenges and you are 13 steps a head in to your way to greatness. Now do some exercises for your brain and for your muscle.
+```js
+console.clear()
+```
 
-## Exercises
+### console.trace()
 
-### Exercises:Level 1
+The console.trace() method displays a custom message and the JavaScript call stack at the point where it was called.
 
-1.  Display the countries array as a table
-2.  Display the countries object as a table
-3.  Use console.group() to group logs
+```js
+const func1 = () => {
+  func2()
+}
+const func2 = () => {
+  func3()
+}
+const func3 = () => {
+  console.trace()
+}
+func1()
+```
 
-### Exercises:Level 2
-
-1. 10 > 2 \* 10 use console.assert()
-2. Write a warning message using console.warn()
-3. Write an error message using console.error()
-
-### Exercises:Level 3
-
-1. Check the speed difference among the following loops: while, for, for of, forEach
-
-🎉 CONGRATULATIONS ! 🎉
+```sh
+func3 @ VM123:6
+func2 @ VM123:3
+func1 @ VM123:1
+(anonymous) @ VM123:9
+```
 
 [<< Day 12](../12_Day_Regular_expressions/12_day_regular_expressions.md) | [Day 14>>](../14_Day_Error_handling/14_day_error_handling.md)

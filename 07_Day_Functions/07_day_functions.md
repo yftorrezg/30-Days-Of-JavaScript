@@ -4,11 +4,6 @@
 
 ## Functions
 
-- _Declaration function_
-- _Expression function_
-- _Anonymous function_
-- _Arrow function_
-
 ### Function Declaration
 
 ```js
@@ -172,9 +167,7 @@ console.log(sumAllNums(15, 20, 30, 25, 10, 33, 40))  // 173
 
 ```js
 const anonymousFun = function () { 
-  console.log(
-    "I am an anonymous function and my value is stored in anonymousFun"
-  );
+  console.log("I am an anonymous function and my value is stored in anonymousFun");
 };
 ```
 
@@ -291,8 +284,8 @@ function weightOfObject(mass, gravity = 9.81) {
   return weight;
 }
 
-console.log("Weight of an object in Newton: ", weightOfObject(100)); // 9.81 gravity at the surface of Earth
-console.log("Weight of an object in Newton: ", weightOfObject(100, 1.62)); // gravity at surface of Moon
+console.log("Newton: ", weightOfObject(100)); // 9.81 gravity at the surface of Earth
+console.log("Newton: ", weightOfObject(100, 1.62)); // gravity at surface of Moon
 ```
 
 Let us see how we write the above functions with arrow functions

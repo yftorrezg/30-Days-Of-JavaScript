@@ -1,42 +1,6 @@
-<div align="center">
-  <h1> 30 Days Of JavaScript: Destructuring and Spreading</h1>
-  <a class="header-badge" target="_blank" href="https://www.linkedin.com/in/asabeneh/">
-  <img src="https://img.shields.io/badge/style--5eba00.svg?label=LinkedIn&logo=linkedin&style=social">
-  </a>
-  <a class="header-badge" target="_blank" href="https://twitter.com/Asabeneh">
-  <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/asabeneh?style=social">
-  </a>
-
-  <sub>Author:
-  <a href="https://www.linkedin.com/in/asabeneh/" target="_blank">Asabeneh Yetayeh</a><br>
-  <small> January, 2020</small>
-  </sub>
-</div>
-
-[<< Day 10](../10_Day_Sets_and_Maps/10_day_Sets_and_Maps.md) | [Day 12>>](../12_Day_Regular_expressions/12_day_regular_expressions.md)
-
-![Day 11](../images/banners/day_1_11.png)
-
-- [Day 11](#day-11)
-	- [Destructuring and Spread](#destructuring-and-spread)
-		- [Destructing Arrays](#destructing-arrays)
-		- [Destructuring during iteration](#destructuring-during-iteration)
-		- [Destructuring Object](#destructuring-object)
-		- [Renaming during structuring](#renaming-during-structuring)
-		- [Object parameter without destructuring](#object-parameter-without-destructuring)
-		- [Object parameter with destructuring](#object-parameter-with-destructuring)
-		- [Destructuring object during iteration](#destructuring-object-during-iteration)
-		- [Spread or Rest Operator](#spread-or-rest-operator)
-		- [Spread operator to get the rest of array elements](#spread-operator-to-get-the-rest-of-array-elements)
-		- [Spread operator to copy array](#spread-operator-to-copy-array)
-		- [Spread operator to copy object](#spread-operator-to-copy-object)
-			- [Spread operator with arrow function](#spread-operator-with-arrow-function)
-	- [Exercises](#exercises)
-		- [Exercises: Level 1](#exercises-level-1)
-		- [Exercises: Level 2](#exercises-level-2)
-		- [Exercises: Level 3](#exercises-level-3)
-
 # Day 11
+
+[<< Day 10](../10_Day_Sets_and_Maps/10_day_Sets_and_Maps.md) | [Day 12 >>](../12_Day_Regular_expressions/12_day_regular_expressions.md)
 
 ## Destructuring and Spread
 
@@ -93,8 +57,6 @@ console.log(backEnd)
 ["Node", "Express", "MongoDB"]
 ```
 
-If we like to skip on of the values in the array we use additional comma. The comma helps to omit the value at that specific index
-
 ```js
   const numbers = [1, 2, 3]
   let [numOne, , numThree] = numbers //2 is omitted
@@ -135,8 +97,6 @@ console.log(firstPerson, secondPerson, thirdPerson, fourthPerson)
 Asabeneh Brook David John
 ```
 
-We can not assign variable to all the elements in the array. We can destructure few of the first and we can get the remaining as array using spread operator(...).
-
 ```js
 const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 let [num1, num2, num3, ...rest] = nums
@@ -156,7 +116,7 @@ console.log(rest)
 const countries = [['Finland', 'Helsinki'], ['Sweden', 'Stockholm'], ['Norway', 'Oslo']]
 
 for (const [country, city] of countries) {
-console.log(country, city)
+  console.log(country, city)
 }
 ```
 
@@ -173,7 +133,7 @@ const fullStack = [
 ]
 
 for(const [first, second, third] of fullStack) {
-console.log(first, second, third)
+  console.log(first, second, third)
 }
 ```
 
@@ -229,10 +189,10 @@ const rectangle = {
 let { width, height, area, perimeter = 60 } = rectangle
 
 console.log(width, height, area, perimeter) //20 10 200 60
-//Let us modify the object:width to 30 and perimeter to 80
 ```
 
 ```js
+//Let us modify the object:width to 30 and perimeter to 80
 const rectangle = {
   width: 30,
   height: 10,
@@ -300,6 +260,10 @@ const getPersonInfo = obj => {
 }
 
 console.log(getPersonInfo(person))
+```
+
+```sh
+Asabeneh Yetayeh lives in Finland. He is 250 years old. He is an Instructor and Developer. He teaches HTML, CSS, JavaScript, React, Redux, Node, MongoDB and Python. He speaks Amharic, English and a little bit of Suomi(Finnish).
 ```
 
 ### Object parameter with destructuring
@@ -491,208 +455,25 @@ console.log(copiedUser)
 
 #### Spread operator with arrow function
 
-Whenever we like to write an arrow function which takes unlimited number of arguments we use a spread operator. If we use a spread operator as a parameter, the argument passed when we invoke a function will change to an array.
-
 ```js
 
 const sumAllNums = (...args) => {
   console.log(args)
 }
 
-sumAllNums(1, 2, 3, 4, 5)
-
-```
-
-```sh
-[1, 2, 3, 4, 5]
-
+sumAllNums(1, 2, 3, 4, 5) // [1, 2, 3, 4, 5]
 ```
 
 ```js
-
 const sumAllNums = (...args) => {
   let sum = 0
   for (const num of args){
     sum += num
   }
   return sum
-  
 }
 
-console.log(sumAllNums(1, 2, 3, 4, 5))
+console.log(sumAllNums(1, 2, 3, 4, 5)) // 15
 ```
-
-```sh
-15
-
-```
-
-🌕 You achieved quite a lot so far. Now, your level of JavaScript is upper intermediate. Keep going! You have just completed day 11 challenges and you are 11 steps a head in to your way to greatness. Now do some exercises for your brain and for your muscle.
-
-## Exercises
-
-### Exercises: Level 1
-
-```js
-const constants = [2.72, 3.14, 9.81, 37, 100]
-const countries = ['Finland', 'Estonia', 'Sweden', 'Denmark', 'Norway']
-const rectangle = {
-  width: 20,
-  height: 10,
-  area: 200,
-  perimeter: 60
-}
-const users = [
-{
-  name:'Brook',
-  scores:75,
-  skills:['HTM', 'CSS', 'JS'],
-  age:16
-},
-{
-  name:'Alex',
-  scores:80,
-  skills:['HTM', 'CSS', 'JS'],
-  age:18
-},
-{
-  name:'David',
-  scores:75,
-  skills:['HTM', 'CSS'],
-  age:22
-},
-{
-  name:'John',
-  scores:85,
-  skills:['HTML'],
-  age:25
-},
-{
-  name:'Sara',
-  scores:95,
-  skills:['HTM', 'CSS', 'JS'],
-  age: 26
-},
-{
-  name:'Martha',
-  scores:80,
-  skills:['HTM', 'CSS', 'JS'],
-  age:18
-},
-{
-  name:'Thomas',
-  scores:90,
-  skills:['HTM', 'CSS', 'JS'],
-  age:20
-}
-]
-```
-
-1. Destructure and assign the elements of constants array to e, pi, gravity, humanBodyTemp, waterBoilingTemp.
-2. Destructure and assign the elements of countries array to fin, est, sw, den, nor
-3. Destructure the rectangle object by its properties or keys.
-
-### Exercises: Level 2
-
-1. Iterate through the users array and get all the keys of the object using destructuring
-2. Find the persons who have less than two skills
-
-### Exercises: Level 3
-
-1. Destructure the countries object print name, capital, population and languages of all countries
-2. A junior developer structure student name, skills and score in array of arrays which may not easy to read. Destructure the following array name to name, skills array to skills, scores array to scores, JavaScript score to jsScore and React score to reactScore variable in one line.
-
-  ```js
-    const student = ['David', ['HTM', 'CSS', 'JS', 'React'], [98, 85, 90, 95]]
-    console.log(name, skills, jsScore, reactScore)
-  ```
-
-  ```sh
-  David (4) ["HTM", "CSS", "JS", "React"] 90 95
-  ```
-
-3. Write a function called *convertArrayToObject* which can convert the array to a structure object.
-
-  ```js
-      const students = [
-          ['David', ['HTM', 'CSS', 'JS', 'React'], [98, 85, 90, 95]],
-          ['John', ['HTM', 'CSS', 'JS', 'React'], [85, 80, 85, 80]]
-        ]
-
-      console.log(convertArrayToObject(students))
-      [
-        {
-          name: 'David',
-          skills: ['HTM','CSS','JS','React'],
-          scores: [98,85,90,95]
-        },
-        {
-          name: 'John',
-          skills: ['HTM','CSS','JS','React'],
-          scores: [85, 80,85,80]
-        }
-      ]
-  ```
-
-4. Copy the student object to newStudent without mutating the original object. In the new object add the following ?
-
-- Add Bootstrap with level 8 to the front end skill sets
-- Add Express with level 9 to the back end skill sets
-- Add SQL with level 8 to the data base skill sets
-- Add SQL without level to the data science skill sets
-
-```js
-    const student = {
-      name: 'David',
-      age: 25,
-      skills: {
-        frontEnd: [
-          { skill: 'HTML', level: 10 },
-          { skill: 'CSS', level: 8 },
-          { skill: 'JS', level: 8 },
-          { skill: 'React', level: 9 }
-        ],
-        backEnd: [
-          { skill: 'Node',level: 7 },
-          { skill: 'GraphQL', level: 8 },
-        ],
-        dataBase:[
-          { skill: 'MongoDB', level: 7.5 },
-        ],
-        dataScience:['Python', 'R', 'D3.js']
-      }
-    }
-  ```
-
- The copied object output should look like this:
-
-```js
-    {
-    name: 'David',
-    age: 25,
-    skills: {
-      frontEnd: [
-        {skill: 'HTML',level: 10},
-        {skill: 'CSS',level: 8},
-        {skill: 'JS',level: 8},
-        {skill: 'React',level: 9},
-        {skill: 'BootStrap',level: 8}
-      ],
-      backEnd: [
-        {skill: 'Node',level: 7},
-        {skill: 'GraphQL',level: 8},
-        {skill: 'Express',level: 9}
-      ],
-      dataBase: [
-        { skill: 'MongoDB',level: 7.5},
-        { skill: 'SQL',level: 8}
-      ],
-      dataScience: ['Python','R','D3.js','SQL']
-    }
-  }
-
-```
-
-🎉 CONGRATULATIONS ! 🎉
 
 [<< Day 10](../10_Day_Sets_and_Maps/10_day_Sets_and_Maps.md) | [Day 12 >>](../12_Day_Regular_expressions/12_day_regular_expressions.md)

@@ -1,60 +1,14 @@
-<div align="center">
-  <h1> 30 Days Of JavaScript: Promises</h1>
-  <a class="header-badge" target="_blank" href="https://www.linkedin.com/in/asabeneh/">
-  <img src="https://img.shields.io/badge/style--5eba00.svg?label=LinkedIn&logo=linkedin&style=social">
-  </a>
-  <a class="header-badge" target="_blank" href="https://twitter.com/Asabeneh">
-  <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/asabeneh?style=social">
-  </a>
-
-<sub>Author:
-<a href="https://www.linkedin.com/in/asabeneh/" target="_blank">Asabeneh Yetayeh</a><br>
-<small> January, 2020</small>
-</sub>
-
-</div>
+# Day 18
 
 [<< Day 17](../17_Day_Web_storages/17_day_web_storages.md) | [Day 19>>](../19_Day_Closures/19_day_closures.md)
 
-![Thirty Days Of JavaScript](../images/banners/day_1_18.png)
-
-- [Day 18](#day-18)
-	- [Promise](#promise)
-	- [Callbacks](#callbacks)
-		- [Promise constructor](#promise-constructor)
-	- [Fetch API](#fetch-api)
-	- [Async and Await](#async-and-await)
-	- [Exercises](#exercises)
-		- [Exercises: Level 1](#exercises-level-1)
-		- [Exercises: Level 2](#exercises-level-2)
-		- [Exercises: Level 3](#exercises-level-3)
-
-# Day 18
-
 ## Promise
-
-We human give or receive a promise to do some activity at some point in time. If we keep the promise we make others happy but if we do not keep the promise, it may lead discontentment. Promise in JavaScript has something in common with the above examples.
-
-A Promise is a way to handle asynchronous operations in JavaScript. It allows handlers with an asynchronous action's eventual success value or failure reason. This lets asynchronous methods return values like synchronous methods: instead of immediately returning the final value, the asynchronous method returns a promise to supply the value at some point in the future.
-
-A Promise is in one of these states:
-
-- pending: initial state, neither fulfilled nor rejected.
-- fulfilled: meaning that the operation completed successfully.
-- rejected: meaning that the operation failed.
-
-A pending promise can either be fulfilled with a value, or rejected with a reason (error). When either of these options happens, the associated handlers queued up by a promise's then method are called. (If the promise has already been fulfilled or rejected when a corresponding handler is attached, the handler will be called, so there is no race condition between an asynchronous operation completing and its handlers being attached.)
 
 As the Promise.prototype.then() and Promise.prototype.catch() methods return promises, they can be chained.
 
 ## Callbacks
 
-To understand promise very well let us understand callback first. Let's see the following callbacks. From the following code blocks you will notice, the difference between callback and promises.
-
 - call back
-  Let us see a callback function which can take two parameters. The first parameter is err and the second is result. If the err parameter is false, there will not be error other wise it will return an error.
-
-In this case the err has a value and it will return the err block.
 
 ```js
 //Callback
@@ -197,9 +151,9 @@ square(2)
 Promise {<resolved>: 4}
 ```
 
-The word _async_ in front of a function means that function will return a promise. The above square function instead of a value it returns a promise.
+The word **_async_** in front of a function means that function will return a promise. The above square function instead of a value it returns a promise.
 
-How do we access the value from the promise? To access the value from the promise, we will use the keyword _await_.
+How do we **access** the value from the promise? To access the value from the promise, we will use the keyword **_await_**.
 
 ```js
 const square = async function (n) {
@@ -244,30 +198,5 @@ const fetchData = async () => {
 console.log('===== async and await')
 fetchData()
 ```
-
-🌕 You are real and you kept your promise and you reached to day 18. Keep your promise and settle the challenge with resolve. You are 18 steps ahead to your way to greatness. Now do some exercises for your brain and  muscles.
-
-## Exercises
-
-```js
-const countriesAPI = 'https://restcountries.com/v2/all'
-const catsAPI = 'https://api.thecatapi.com/v1/breeds'
-```
-
-### Exercises: Level 1
-
-1. Read the countries API using fetch and print the name of country, capital, languages, population and area.
-
-### Exercises: Level 2
-
-1. Print out all the cat names in to catNames variable.
-
-### Exercises: Level 3
-
-1. Read the cats api and find the average weight of cat in metric unit.
-2. Read the countries api and find out the 10 largest countries
-3. Read the countries api and count total number of languages in the world used as officials.
-
-🎉 CONGRATULATIONS ! 🎉
 
 [<< Day 17](../17_Day_Web_storages/17_day_web_storages.md) | [Day 19>>](../19_Day_Closures/19_day_closures.md)

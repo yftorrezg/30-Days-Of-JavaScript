@@ -7,7 +7,7 @@
 ### Event Listeners
 
 Common HTML events:onclick, onchange, onmouseover, onmouseout, onkeydown, onkeyup, onload.
-We can add event listener method to any DOM object. We use **_addEventListener()_** method to listen different event types on HTML elements. The _addEventListener()_ method takes two arguments, an event listener and a callback function.
+We use **_addEventListener()_** method to listen different event types.  toma dos argumentos, un event listener y una función callback.
 
 ```js
 selectedElement.addEventListener('eventlistner', function(e) {
@@ -21,12 +21,6 @@ selectedElement.addEventListener('eventlistner', e => {
 ```
 
 #### Click
-
-To attach an event listener to an element, first we select the element then we attach the addEventListener method. The event listener takes event type and callback functions as argument.
-
-The following is an example of click type event.
-
-**Example: click**
 
 ```html
 <!DOCTYPE html>
@@ -53,8 +47,6 @@ The following is an example of click type event.
 </html>
 ```
 
-An event can be also attached directly to the HTML element as inline script.
-
 **Example: onclick**
 
 ```html
@@ -76,11 +68,6 @@ An event can be also attached directly to the HTML element as inline script.
 ```
 
 #### Double Click
-
-To attach an event listener to an element, first we select the element then we attach the addEventListener method. The event listener takes event type and callback functions as argument.
-
-The following is an example of click type event.
-**Example: dblclick**
 
 ```html
 <!DOCTYPE html>
@@ -108,12 +95,6 @@ The following is an example of click type event.
 
 #### Mouse enter
 
-To attach an event listener to an element, first we select the element then we attach the addEventListener method. The event listener takes event type and callback functions as argument.
-
-The following is an example of click type event.
-
-**Example: mouseenter**
-
 ```html
 <!DOCTYPE html>
 <html>
@@ -138,9 +119,6 @@ The following is an example of click type event.
 </html>
 ```
 
-By now you are familiar with addEventListen method and how to attach event listener. There are many types of event listeners. But in this challenge we will focus the most common important events.
-List of events:
-
 - click - when the element clicked
 - dblclick - when the element double clicked
 - mouseenter - when the mouse point enter to the element
@@ -155,8 +133,6 @@ List of events:
 - keyup - when a key is up
 - keypress - when we press any key
 - onload - when the browser has finished loading a page
-
-Test the above event types by replacing event type in the above snippet code.
 
 ### Getting value from an input element
 
@@ -186,7 +162,7 @@ We usually fill forms and forms accept data. Form fields are created using input
       let bmi
       button.addEventListener('click', () => {
         bmi = mass.value / height.value ** 2
-        alert(`your bmi is ${bmi.toFixed(2)}`)
+        alert(`your bmi is ${bmi.toFixed(2)}`) // ? toFixed() method is used to convert a number into a string, keeping a specified number of decimals.
         console.log(bmi)
       })
     </script>
@@ -196,7 +172,7 @@ We usually fill forms and forms accept data. Form fields are created using input
 
 #### input event and change
 
-In the above example, we managed to get input values from two input fields by clicking button. How about if we want to get value without click the button. We can use the _change_ or _input_ event type to get data right away from the input field when the field is on focus. Let us see how we will handle that.
+En el ejemplo anterior, **hemos conseguido obtener los valores** de entrada de dos campos de entrada haciendo **click** en el **botón**. Qué tal si queremos obtener el valor **sin** hacer click en el botón. Podemos utilizar el tipo de evento **change** o **input** para obtener los datos inmediatamente del campo de entrada cuando el campo está en el foco. Veamos cómo lo haremos.
 
 ```html
 <!DOCTYPE html>
@@ -215,12 +191,33 @@ In the above example, we managed to get input values from two input fields by cl
       const input = document.querySelector('input')
       const p = document.querySelector('p')
 
-      input.addEventListener('input', e => {
-        p.textContent = e.target.value
-      })
+      input.addEventListener('input', e => { // ? input event: when the value of an element has been changed, the input event is fired. This event occurs immediately after the value has been changed.
+        p.textContent = e.target.value // ? e.target.value: gives the value of the input field when the input event is fired.
     </script>
   </body>
 </html>
+
+// ON  CHANGE 
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document Object Model:30 Days Of JavaScript</title>
+  </head>
+
+  <body>
+    <h1>Data Binding using input or change event</h1>
+
+    <input type="text" placeholder="say something" />
+    <p></p>
+
+    <script>
+      const input = document.querySelector('input')
+      const p = document.querySelector('p')
+
+      input.addEventListener('change', e => { // ? change event: when the value of an element has been changed, the change event is fired. This event occurs when the element loses focus.
+        p.textContent = e.target.value // ? e.target.value: gives the value of the input field when the input event is fired.
+    </script>
+  </body>
 ```
 
 #### blur event
@@ -256,7 +253,7 @@ In contrast to _input_ or _change_, the _blur_ event occur when the input field 
 </html>
 ```
 
-#### keypress, keydow and keyup
+#### keypress, keydown and keyup
 
 We can access all the key numbers of the keyboard using different event listener types. Let us use keypress and get the keyCode of each keyboard keys.
 
@@ -272,7 +269,7 @@ We can access all the key numbers of the keyboard using different event listener
 
     <script>
       document.body.addEventListener('keypress', e => {
-        alert(e.keyCode)
+        alert(e.keyCode) // gives the key code of the key pressed.
       })
     </script>
   </body>
